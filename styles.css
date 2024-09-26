@@ -72,14 +72,18 @@ header {
 }
 
 aside {
-    width: 200px;
+    width: 204px;
     background-color: #f8f8f8;
     border-right: 2px solid #ccc;
     padding: 20px 0;
     margin-top: 10px;
     margin-right: 8px;
     border-top: 1px solid #ccc;
+    height: 500px;
+    overflow-y: auto;
+    
 }
+
 
 
 nav ul {
@@ -128,7 +132,7 @@ main {
     background-color: #fff;
     margin-top: 10px;
     border-left: 2px solid #ccc;
-    border-top: 1px solid #ccc;
+    border-top: 2px solid #ccc;
 }
 
 .breadcrumb {
@@ -144,7 +148,7 @@ main {
 
 
 .content {
-    font-size: 1.2em;
+    font-size: 0.7em;
 }
 
 footer {
@@ -152,7 +156,7 @@ footer {
     border-top: 1px solid #ccc;
     position: relative;
     float: right;
-    width: 84%;
+    width: 83.7%;
     border: 2px solid #ccc;
     margin-top: 10px;
     margin-bottom: 10px;
