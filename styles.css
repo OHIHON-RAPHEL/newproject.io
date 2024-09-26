@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    height: fit-content;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+}
+
+.logo {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+
+.img {
+    margin-right: 3px;
+    width: 32px;
+    border: 2px solid rgba(255, 0, 0, 0.589);
+    padding: 6px;
+    background-color: rgba(255, 0, 0, 0.719);
+    color:white;
+}
+
+.span {
+    border: 2px solid rgba(255, 0, 0, 0.911);
+    padding: 4px;
+    margin-right: 1em;
+    color:rgba(255, 0, 0, 0.87);
+    font-size: 1.2em;
+    width: 130px;
+    text-align: center;
+}
+
+.lab-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.user-profile {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    margin-right: 10px;
+}
+
+.user-icon {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+aside {
+    width: 200px;
+    background-color: #f8f8f8;
+    border-right: 2px solid #ccc;
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-right: 8px;
+    border-top: 1px solid #ccc;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    color: red;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    width: 100%;
+    margin: 0 10px;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid #b22222;
+    font-weight: bold;
+    
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-left: 2px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.breadcrumb {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.sp {
+    font-weight: 900;
+}
+
+
+
+.content {
+    font-size: 1.2em;
+}
+
+footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    position: relative;
+    float: right;
+    width: 84%;
+    border: 2px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about {
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+    margin: 0;
+
+}
+
+
+
