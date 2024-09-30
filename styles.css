@@ -11,6 +11,7 @@ body {
     height: fit-content;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
@@ -21,51 +22,105 @@ header {
 }
 
 .logo {
-    height: 40px;
     display: flex;
     align-items: center;
+    height: 40px;
 }
 
-
-.img {
-    margin-right: 3px;
+.logo img.img {
     width: 32px;
+    margin-right: 3px;
     border: 2px solid rgba(255, 0, 0, 0.589);
     padding: 6px;
     background-color: rgba(255, 0, 0, 0.719);
     color:white;
 }
 
-.span {
-    border: 2px solid rgba(255, 0, 0, 0.911);
-    padding: 4px;
-    margin-right: 1em;
-    color:rgba(255, 0, 0, 0.87);
+.logo .span {
     font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 1em;
     width: 130px;
     text-align: center;
+    border: 2px solid rgba(255, 0, 0, 0.911);
+    padding: 4px;
+    color:rgba(255, 0, 0, 0.87);
 }
 
-.lab-name {
+.logo .fas.fa-bars {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.logo .lab-name {
+    display: block;
     font-size: 1.5em;
     font-weight: bold;
     margin-left: 20px;
 }
 
 .user-profile {
-    height: 40px;
     display: flex;
     align-items: center;
+    height: 40px;
 }
 
-.user-name {
-    margin-right: 10px;
-}
-
-.user-icon {
+.user-profile .user-icon {
     margin-right: 10px;
     width: 20px;
 }
+
+.user-profile .user-name {
+    margin-right: 10px;
+}
+
+.user-profile .fas.fa-arrow-down {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Mobile view for header section */
+@media screen and (max-width: 414px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo .lab-name {
+        display: none;
+    }
+
+    .user-profile {
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .user-profile .user-icon {
+        width: 25px;
+    }
+
+    .user-profile .user-name {
+        font-size: 14px;
+    }
+
+    .logo img.img {
+        width: 30px;
+    }
+
+    .logo .span {
+        font-size: 16px;
+    }
+}
+
+
+
+
 
 .container {
     display: flex;
@@ -169,6 +224,42 @@ footer {
     margin: 0;
 
 }
+
+
+/* Mobile View
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lab-name {
+        font-size: 1em;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    footer {
+        width: 100%;
+        padding: 10px;
+    }
+} */
+
 
 
 
