@@ -121,32 +121,28 @@ header {
 
 
 
-
 .container {
     display: flex;
+    justify-content: space-between;
 }
 
 aside {
     width: 204px;
-    background-color: #f8f8f8;
     border-right: 2px solid #ccc;
+    background-color: #f8f8f8;
     padding: 20px 0;
     margin-top: 10px;
     margin-right: 8px;
     border-top: 1px solid #ccc;
     height: 500px;
     overflow-y: auto;
-    
 }
 
-
-
-nav ul {
+aside ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 
 li {
     display: flex;
@@ -160,10 +156,6 @@ nav ul li {
     font-weight: bold;
 }
 
-nav ul li:hover {
-    color: red;
-}
-
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -174,10 +166,12 @@ nav ul li a {
 
 nav ul li a:hover {
     border-bottom: 3px solid #b22222;
-    font-weight: bold;
-    
+    font-weight: bold;   
 }
 
+nav ul li:hover {
+    color: red;
+}
 
 main {
     flex: 1;
@@ -200,11 +194,64 @@ main {
     font-weight: 900;
 }
 
-
-
 .content {
     font-size: 0.7em;
 }
+
+
+/* Mobile view for container side */
+@media screen and (max-width: 414px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+        height: 350px;
+        margin-bottom: 3px;
+        border-bottom: 2px solid #ccc;
+    }
+
+    main {
+        width: 100%;
+        border-left: 0px;
+    }
+
+    nav ul li {
+        justify-content: space-between;
+    }
+
+    aside ul li i {
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        width: 30%;
+    }
+
+    .breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+
+    .breadcrumb span {
+        margin-right: 5px;
+    }
+
+    .sp {
+        font-weight: 750;
+    }
+}
+
+
+
+
+
 
 footer {
     padding: 10px;
@@ -225,40 +272,6 @@ footer {
 
 }
 
-
-/* Mobile View
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .lab-name {
-        font-size: 1em;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    aside {
-        width: 100%;
-    }
-
-    nav ul li {
-        padding: 10px;
-    }
-
-    main {
-        padding: 10px;
-        margin-top: 10px;
-    }
-
-    footer {
-        width: 100%;
-        padding: 10px;
-    }
-} */
 
 
 
