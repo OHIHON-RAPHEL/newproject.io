@@ -11,7 +11,7 @@ body {
     height: fit-content;
 }
 
-
+/* Header section */
 header {
     display: flex;
     justify-content: space-between;
@@ -79,8 +79,8 @@ header {
     cursor: pointer;
 }
 
-/* Mobile view for header section */
-@media screen and (max-width: 414px) {
+/* Mobile view for Header section */
+@media screen and (max-width: 720px) {
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -119,8 +119,7 @@ header {
 }
 
 
-
-
+/* Container section */
 .container {
     display: flex;
     justify-content: space-between;
@@ -200,7 +199,7 @@ main {
 
 
 /* Mobile view for container side */
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
     .container {
         flex-direction: column;
         width: 100%;
@@ -211,7 +210,7 @@ main {
         width: 100%;
         margin-bottom: 20px;
         padding: 20px;
-        height: 350px;
+        height: 400px;
         margin-bottom: 3px;
         border-bottom: 2px solid #ccc;
     }
@@ -219,6 +218,7 @@ main {
     main {
         width: 100%;
         border-left: 0px;
+        border-bottom: 1px solid #ccc;
     }
 
     nav ul li {
@@ -230,7 +230,7 @@ main {
     }
 
     nav ul li a {
-        width: 30%;
+        width: 40%;
     }
 
     .breadcrumb {
@@ -249,14 +249,12 @@ main {
 }
 
 
-
-
-
-
+/* Footer section */
 footer {
     padding: 10px;
+    text-align: center;
     border-top: 1px solid #ccc;
-    position: relative;
+    /* position: relative; */
     float: right;
     width: 83.7%;
     border: 2px solid #ccc;
@@ -264,15 +262,32 @@ footer {
     margin-bottom: 10px;
 }
 
-.about {
-    text-align: center;
-    font-size: 0.9em;
-    color: #888;
+footer p {
     margin: 0;
-
+    font-size: 14px;
 }
 
+footer a {
+    text-decoration: none;
+    margin: 0 5px;
+}
 
+/* Mobile view for Footer section */
+@media screen and (max-width: 1000px) {
+    footer p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
 
+    footer {
+        width: 100%;
+        border-left: 0px;
+        border-right: 0px;
+    }
 
-
+    footer p a {
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+}
