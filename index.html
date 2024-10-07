@@ -85,22 +85,102 @@
 
         <!-- Main content -->
         <main>
-            <div class="content">
-                <h2>Blank Page</h2>
-            </div>
-
-            <!-- Breadcrumb navigation -->
+          <div class="content">
+            <h1>Drug Prescription Page</h1>
             <div class="breadcrumb">
-              <span>Home ></span>
-              <span >Page > 1</span>
-              <span class="sp">Page 2</span>
+              <span>Home > Page 1 > </span><strong>Page 2</strong>
+            </div>
+          </div>
+  
+          <table class="prescription-table">
+              <thead>
+                  <tr>
+                      <th>S/N</th>
+                      <th>Medicine Name</th>
+                      <th>Strength</th>
+                      <th>Interval/Duration</th>
+                      <th>Instruction</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td>Tab Enzor Paracetamol 250mg<div>Arthemeter</div></td>
+                      <td>250mg</td>
+                      <td>QDS/7 days</td>
+                      <td>1 Morning, one night for 7 days</td>
+                      <td><button class="remove-btn">Remove</button></td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td>Tab Enzor Paracetamol 250mg<div>Arthemeter</div></td>
+                      <td>250mg</td>
+                      <td>QDS/7 days</td>
+                      <td>1 Morning, one night for 7 days</td>
+                      <td><button class="remove-btn">Remove</button></td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>Tab Enzor Paracetamol 250mg<div>Arthemeter</div></td>
+                      <td>250mg</td>
+                      <td>QDS/7 days</td>
+                      <td>1 Morning, one night for 7 days</td>
+                      <td><button class="remove-btn">Remove</button></td>
+                  </tr>
+              </tbody>
+          </table>
+  
+          <div class="add-prescription-form">
+              <div class="holding">
+              <h3>Search Medicine brand</h3>
+              <h3>Interval</h3>
+              <h3>Special Instruction</h3>
+              <h3>srrdsrdr</h3>
+              </div>
+              <form>
+                <div>
+                  <label class="branding-label">
+                      <span class="branding">Search Medicine brand</span>
+                  </label>
+                  <input type="text" placeholder="Search medicine brand" class="input-field-1" />
+                  <p class="help-text">Please enter your details carefully.</p>
+                </div>
+                <div>
+                  <label class="branding-label">
+                      <span class="branding">Interval</span>
+                  </label>
+                  <input type="text" placeholder="Search medicine brand" class="input-field-2" />
+                </div>
+                <div>
+                  <label class="branding-label">
+                      <span class="branding">Special Instruction</span>
+                  </label>
+                  <input type="text" placeholder="Search medicine brand" class="input-field-3" />
+                </div>
+                <div>
+                  <label class="branding-label">
+                      <span class="branding">Duration</span>
+                  </label>
+                  <input type="text" placeholder="Search medicine brand" class="input-field-4" />
+                </div>
+                  
+                  <!-- <input type="text" placeholder="Search medicine brand" class="input-field-1" /> -->
+                  
+                  
+                  <button type="button" class="add-btn">Add</button>
+              </form>
+          </div>
+  
+          <!-- <div class="nav-buttons">
+              <button class="nav-btn">NEXT</button>
+              <button class="nav-btn">BACK</button>
+          </div> -->
         </main>
+
     </div>
 
-    <!-- Footer section -->
-    <!-- <footer>
-        <p class="about">e-Lab LIS by Netwalkers.NG (c) 2022. All rights reserved | About us | Contact Us | Terms of Services | Privacy Policy</p>
-    </footer> -->
+    
     <footer>
       <p class="about">e-Lab LIS by Netwalkers.NG (c) 2022. All rights reserved | 
           <a href="#">About Us</a> | 
@@ -108,6 +188,6 @@
           <a href="#">Terms of Services</a> | 
           <a href="#">Privacy Policy</a>
       </p>
-  </footer>
+    </footer>
 </body>
 </html>
