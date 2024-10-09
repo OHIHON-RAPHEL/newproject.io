@@ -9,83 +9,66 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- Header section -->
-    <header> 
-        <div class="logo">
-            <img src="images/logo box white.png" class="img">
-            <span class="span">e-Lab LIS</span>
-            <i class="fas fa-bars"></i>
-            <div class="lab-name">Your Labouratory Name</div>
+<body>   
+    <header class="top-header">
+      <section>
+        <div class="span">
+        <img src="images/logo box white.png">
+        <h1>e-Lab LIS</h1>
         </div>
-        <div class="user-profile">
-            <img src="images/bell.png" class="user-icon">
-            <img src="images/avater.png" class="user-icon">
-            <span class="user-name">Isaac Odinaka</span>
-            <i class="fas fa-arrow-down"></i>
-        </div>
+
+        <svg
+          width="50px"
+          height="50px"
+          viewBox="0 0 24.00 24.00"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="#5B5B5B"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke="#5B5B5B"
+            stroke-width="0.096"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M3 12H15M3 6H21M3 18H21"
+              stroke="#5B5B5B"
+              stroke-width="1.3679999999999999"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <h2>Your Laboratory Name</h2>
+      </section>
+      <section>
+        <img src="images/bell.png" class="user-icon">
+        <img src="images/avater.png" class="user-icon">
+        <p>Isaac Odinaka</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+          width="20px"
+          height="20px"
+        >
+          <path
+            d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          />
+        </svg>
+      </section>
     </header>
 
     <!-- Main container -->
     <div class="container">
-      <!-- Sidebar navigation -->
-        
-        <!-- <aside>
-            <nav>
-                <ul>
-                    <li>
-                      <i class="fas fa-building"></i>
-                      <a href="#">Front Office</a>
-                      <i class="fas fa-arrow-down"></i>
-                    </li>
-                    <li>
-                      <i class="fas fa-vector-square"></i>
-                      <a href="#">Phlebotomy</a>
-                        <i class="fas fa-arrow-down"></i>
-                    </li>
-                    <li>
-                        <i class="fas fa-flask"></i>
-                        <a href="#">Laboratory</a>
-                        <i class="fas fa-arrow-down"></i>
-                    </li>
-                    <li>
-                      <i class="fas fa-book-open"></i>
-                      <a href="#">Admin</a>
-                      <i class="fas fa-arrow-down"></i>
-                    </li>
-                    <li>
-                      <i class="fas fa-motorcycle"></i>
-                      <a href="#">Dispatch</a>
-                      <i class="fas fa-arrow-down"></i>
-                    </li>
-                    <li>
-                      <i class="fas fa-microscope"></i>
-                      <a href="#">Analyzers</a>
-                      <i class="fas fa-arrow-down"></i>
-                    </li>
-                    <li>
-                      <i class="fas fa-check-double"></i>
-                      <a href="#">QC</a>
-                      <i class="fas fa-arrow-down"></i>
-                    </li>
-                    <li>
-                      <i class="far fa-money-bill-alt"></i>
-                      <a href="#">Account</a>
-                      <i class="fas fa-arrow-down"></i>
-                    </li>
-                    <li>
-                      <i class="fas fa-archive"></i>
-                      <a href="#">Inventory</a>
-                      <i class="fas fa-arrow-up"></i>
-                    </li>
-                </ul>
-            </nav>
-        </aside> -->
-          
+      <!-- Sidebar navigation -->              
         <aside>
           <div class="nav-content">
             <div>
-              <img src="./assets/building.svg" alt="building" />
+              <i class="fas fa-building"></i>
               <p>Front Office</p>
             </div>
             <svg
@@ -101,7 +84,7 @@
           </div>
           <div class="nav-content">
             <div>
-              <img src="./assets/needle.svg" alt="building" />
+              <i class="fas fa-vector-square"></i>
               <p>Phlebotomy</p>
             </div>
             <svg
@@ -117,7 +100,7 @@
           </div>
           <div class="nav-content">
             <div>
-              <img src="./assets/flask-solid 1.svg" alt="building" />
+              <i class="fas fa-flask"></i>
               <p>Laboratory</p>
             </div>
             <svg
@@ -133,7 +116,7 @@
           </div>
           <div class="nav-content">
             <div>
-              <img src="./assets/book-open-solid 1.svg" alt="building" />
+              <i class="fas fa-book-open"></i>
               <p>Admin</p>
             </div>
             <svg
@@ -149,7 +132,7 @@
           </div>
           <div class="nav-content">
             <div>
-              <img src="./assets/motorcycle-solid (1) 1.svg" alt="building" />
+              <i class="fas fa-motorcycle"></i>
               <p>Dispatch</p>
             </div>
             <svg
@@ -165,7 +148,7 @@
           </div>
           <div class="nav-content">
             <div>
-              <img src="./assets/microscope-solid 1.svg" alt="building" />
+              <i class="fas fa-microscope"></i>
               <p>Analyzers</p>
             </div>
             <svg
@@ -181,7 +164,7 @@
           </div>
           <div class="nav-content">
             <div>
-              <img src="./assets/check-double-solid 1.svg" alt="building" />
+              <i class="fas fa-check-double"></i>
               <p>QC</p>
             </div>
             <svg
@@ -197,7 +180,7 @@
           </div>
           <div class="nav-content">
             <div>
-              <img src="./assets/money-bill-alt-regular 1.svg" alt="building" />
+              <i class="far fa-money-bill-alt"></i>
               <p>Account</p>
             </div>
             <svg
@@ -213,7 +196,7 @@
           </div>
           <div class="nav-content">
             <div>
-              <img src="./assets/archive-solid 1.svg" alt="building" />
+              <i class="fas fa-archive"></i>
               <p>Inventory</p>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -222,15 +205,38 @@
               />
             </svg>
           </div>
-          <div class="bar"></div>
+          <!-- <div class="bar"></div> -->
         </aside>
 
         <!-- Main content -->
         <main>
-          <div class="content">
-            <h1>Drug Prescription Page</h1>
-            <div class="breadcrumb">
-              <span>Home > Page 1 > </span><strong>Page 2</strong>
+          <div class="blank-heading">
+            <!-- <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="20px"
+              height="20px"
+              class="sideNav"
+            >
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
+            </svg> -->
+            <p>Drug Prescription Page</p>
+            <div>
+              <p>Home</p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                />
+              </svg>
+              <p>Page 1</p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                />
+              </svg>
+              <p>Page 2</p>
             </div>
           </div>
 
@@ -358,315 +364,19 @@
 
     </div>
 
-    
+    <div class="button-section">
+      <button>
+        <p>Next</p>
+        <img src="./images/arrow.png" />
+      </button>
+    </div>
     <footer>
       <p class="about">e-Lab LIS by Netwalkers.NG (c) 2022. All rights reserved | 
-          <a href="#">About Us</a> | 
-          <a href="#">Contact Us</a> | 
-          <a href="#">Terms of Services</a> | 
-          <a href="#">Privacy Policy</a>
+        <a href="#">About Us</a> | 
+        <a href="#">Contact Us</a> | 
+        <a href="#">Terms of Services</a> | 
+        <a href="#">Privacy Policy</a>
       </p>
     </footer>
 </body>
 </html>
-
-
-<!-- <aside>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/building.svg" alt="building" />
-      <p>Front Office</p>
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 384 512"
-      width="25px"
-      height="25px"
-    >
-      <path
-        d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-      />
-    </svg>
-  </div>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/needle.svg" alt="building" />
-      <p>Phlebotomy</p>
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 384 512"
-      width="25px"
-      height="25px"
-    >
-      <path
-        d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-      />
-    </svg>
-  </div>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/flask-solid 1.svg" alt="building" />
-      <p>Laboratory</p>
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 384 512"
-      width="25px"
-      height="25px"
-    >
-      <path
-        d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-      />
-    </svg>
-  </div>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/book-open-solid 1.svg" alt="building" />
-      <p>Admin</p>
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 384 512"
-      width="25px"
-      height="25px"
-    >
-      <path
-        d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-      />
-    </svg>
-  </div>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/motorcycle-solid (1) 1.svg" alt="building" />
-      <p>Dispatch</p>
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 384 512"
-      width="25px"
-      height="25px"
-    >
-      <path
-        d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-      />
-    </svg>
-  </div>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/microscope-solid 1.svg" alt="building" />
-      <p>Analyzers</p>
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 384 512"
-      width="25px"
-      height="25px"
-    >
-      <path
-        d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-      />
-    </svg>
-  </div>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/check-double-solid 1.svg" alt="building" />
-      <p>QC</p>
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 384 512"
-      width="25px"
-      height="25px"
-    >
-      <path
-        d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-      />
-    </svg>
-  </div>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/money-bill-alt-regular 1.svg" alt="building" />
-      <p>Account</p>
-    </div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 384 512"
-      width="25px"
-      height="25px"
-    >
-      <path
-        d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-      />
-    </svg>
-  </div>
-  <div class="nav-content">
-    <div>
-      <img src="./assets/archive-solid 1.svg" alt="building" />
-      <p>Inventory</p>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-      <path
-        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-      />
-    </svg>
-  </div>
-  <div class="bar"></div>
-</aside> -->
-
-<!-- .nav-content > div {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 25px;
-}
-.nav-content > div > img {
-  width: 25px;
-  object-fit: contain;
-}
-.nav-content > div > p{
-  font: 500 26px "Roboto", sans-serif;
-  text-transform: capitalize;
-  color: var(--main_color);
-}
-.nav-content > svg{
-  margin-right: 15px;
-  width: 20px;
-  height: 20px;
-  fill: var(--main_color);
-}
-.nav-content:nth-of-type(9) > div > p {
-  text-decoration: underline;
-  text-underline-offset: 10px;
-  text-decoration-color: var(--tertiary_color);
-}
-.bar{
-  width: 9px;
-  height: 547px;
-  background-color: var(--secondary_color);
-  position: absolute;
-  top: 55px;
-  right: 7px;
-} -->
-
-<!-- <section class="blank-container">
-  <div class="blank-heading">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 448 512"
-      width="20px"
-      height="20px"
-      class="sideNav"
-    >
-      <path
-        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-      />
-    </svg>
-    <p>Drug Prescription Page</p>
-    <div>
-      <p>Home</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <path
-          d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-        />
-      </svg>
-      <p>Page 1</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <path
-          d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-        />
-      </svg>
-      <p>Page 2</p>
-    </div>
-  </div>
-  <div class="select-options">
-    <button>Vital Signs</button>
-    <button>Presenting Complain</button>
-    <button>Diagnosis</button>
-    <button>Charges</button>
-    <button>Payments</button>
-    <button>Prescriptions</button>
-    <button>Medications</button>
-  </div>
-  <div class="drug-table">
-    <h4>Prescribed Drugs</h4>
-    <table>
-      <tr>
-        <th>S/N</th>
-        <th>Medicine Name</th>
-        <th>Strength</th>
-        <th>Interval/Duration</th>
-        <th>Instruction</th>
-        <th>Action</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td class="medicine-name">
-          <p>Tab Emzor Paracetamol 250mg</p>
-          <button>Arthemeter</button>
-        </td>
-        <td>250mg</td>
-        <td>QDS/7 days</td>
-        <td>1 Morning, one night for 7 days</td>
-        <td class="action">
-          <button>Remove</button>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td class="medicine-name">
-          <p>Tab Emzor Paracetamol 250mg</p>
-          <button>Arthemeter</button>
-        </td>
-        <td>250mg</td>
-        <td>QDS/7 days</td>
-        <td>1 Morning, one night for 7 days</td>
-        <td class="action">
-          <button>Remove</button>
-        </td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td class="medicine-name">
-          <p>Tab Emzor Paracetamol 250mg</p>
-          <button>Arthemeter</button>
-        </td>
-        <td>250mg</td>
-        <td>QDS/7 days</td>
-        <td>1 Morning, one night for 7 days</td>
-        <td class="action">
-          <button>Remove</button>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="add-drug">
-    <div>
-      <p>Search Medicine brand</p>
-      <input type="text" placeholder="search medicine brand" />
-      <section>
-        <div>
-          <p>Emzor Paracetamol Tab 250mg</p>
-          <p>(10 sachet left)</p>
-        </div>
-        <div>
-          <p>Paracetamol</p>
-          <p>(5 bottles left)</p>
-        </div>
-      </section>
-    </div>
-    <div>
-      <p>Interval</p>
-      <input type="text" placeholder="Enter  interval" />
-    </div>
-    <div>
-      <p>Special Instruction</p>
-      <input type="text" placeholder="enter instruction" />
-    </div>
-    <div>
-      <p>Duration</p>
-      <input type="text" placeholder="enter duration" />
-    </div>
-    <button>Add</button>
-  </div>
-</section> -->
