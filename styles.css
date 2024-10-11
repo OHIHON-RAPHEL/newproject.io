@@ -82,52 +82,101 @@ body {
     color: #5B5B5B;
 }
 
-
-
-/* Mobile view for Header section */
-@media screen and (max-width: 720px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
+@media screen and (max-width: 1000px) {
+    .top-header {
+        /* display: flex; */
+        
+        /* justify-content: none; */
+        /* flex-direction: column; */
+        padding: 15px 12px;
+        height: auto;
     }
 
-    .logo {
-        justify-content: space-between;
-        width: 100%;
+    .top-header > section {
+        /* width: 100%; */
+        /* justify-content: center; */
+        margin-bottom: 10px;
     }
 
-    .logo .lab-name {
+    .top-header > section:nth-child(1) {
+        /* display: flex; */
+        /* justify-content: space-between; */
+        gap: 20px;
+        /* align-items: center; */
+    }
+
+    .top-header > section:nth-child(1) > div {
+        /* flex-direction: column; */
+        
+        /* gap: 10px;
+        align-items: center; */
+    }
+
+    .top-header > section:nth-child(1) > div > h1 {
+        font-size: 14px;
+        padding: 3px;
+        width: 100px;
+        text-align: center;
+    }
+
+    .top-header > section:nth-child(1) > h2 {
+        /* display: none; */
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .top-header > section:nth-child(1) > div > img {
+        width: 30px;
+        padding: 5px;
+    }
+
+    .top-header > section:nth-child(2) {
+        
+        /* justify-content: space-between;
+        gap: 5px; */
+        /* background-color: red; */
+    }
+
+    .top-header > section:nth-child(2) > img {
+        /* width: 3px;
+        background-color: red; */
+    }
+
+    @media screen and (max-width: 766px) {
+    .top-header > section:nth-child(2) > svg, p {
+        font-size: 10px;
         display: none;
     }
-
-    .user-profile {
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 10px;
     }
 
-    .user-profile .user-icon {
-        width: 25px;
-    }
+     @media screen and (max-width: 580px) {
+        .top-header > section:nth-child(1) > h2 {
+            position: relative;
+            top: 5em;
+            right: 16em;
+            font-size: 20px;
+            font-weight: 750;
+            position: fixed;
+        }
+     }
 
-    .user-profile .user-name {
-        font-size: 14px;
-    }
-
-    .logo img.img {
-        width: 30px;
-    }
-
-    .logo .span {
-        font-size: 16px;
-    }
+     @media screen and (max-width: 548px) {
+        .top-header > section:nth-child(1) > h2 {
+            left: 0.8em;
+            width: 100%;
+        }
+     }
+     
 }
+
+
 
 
 /* Container section */
 .container {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 aside {
@@ -174,6 +223,13 @@ aside > .nav-content{
     text-decoration-color: #e74c3c;
 }
 
+
+@media screen and (max-width: 838px) {
+    aside {
+        display: none;
+    }
+}
+
 /* main */
 main {
     background-color: #fff;
@@ -181,7 +237,8 @@ main {
     padding: 20px;
     box-shadow: -7px -3px 10px -2px rgba(0, 0, 0, 0.2);
     height: 620px;
-    width: 1040px;
+    /* width: 1040px; */
+    flex: 1;
 }
 
 .blank-heading {
@@ -222,6 +279,98 @@ main {
     fill: #5B5B5B;
 }
 
+main > div:nth-child(1) > svg {
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 1028px) {
+    main {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        box-shadow: none;   
+    }
+
+    .blank-heading {
+        /* justify-content: flex-start; */
+        /* flex-direction: column;
+        align-items: flex-start;
+        text-align: left; */
+    }
+
+    .blank-heading > div > p {
+        display: block;
+    }
+
+
+    main > div > p {
+        display: block;
+    }
+
+    /* main > div:nth-child(2) {
+        display: block;
+    } */
+
+    /* .home-page {
+        display: none;
+        background-color: red;
+    } */
+
+    @media screen and (max-width:580px) {
+        main {
+            margin-top: 30px;
+        }
+    }
+    
+    @media screen and (max-width: 838px) {
+        main > div:nth-child(1) > svg {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width:579px) {
+        .blank-heading > div > p, svg {
+            display: none;
+        }
+    }
+
+    .drug-table {
+        margin-bottom: 50px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .drug-table > h4 {
+        font-size: 14px;
+    }
+
+    .drug-table > table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    .select-options {
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 25px;
+    }
+
+    .select-options > button {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+}
+
+
+
 /* table */
 .drug-table {
     width: 100%;
@@ -234,8 +383,8 @@ main {
 }
 
 .drug-table > h4{
-    font: 500 15px "Roboto", sans-serif;
-    
+    font: 600 15px "Roboto", sans-serif;
+    margin-bottom: 4px;
 }
 
 .drug-table > table{
@@ -349,15 +498,19 @@ td:nth-child(1) {
 .add-drug > div:nth-child(1) {
     width: 29.2%;
 }
+
 .add-drug > div:nth-child(2) {
     width: 24.2%;
 }
+
 .add-drug > div:nth-child(3) {
     width: 27.8%;
 }
+
 .add-drug > div:nth-child(4) {
     width: 11.8%;
 }
+
 .add-drug > div > input{
     width: 100%;
     padding: 10px 10px 5px 23px;
@@ -368,24 +521,28 @@ td:nth-child(1) {
     box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.2);
     font: 500 15px "Roboto", sans-serif;
 }
+
 .add-drug > div > input:nth-last-child(1){
     padding: 7px;  
 }
+
 .add-drug > div > ::placeholder{
     color: #C4C4C4;
     font: 300 14px "Roboto", sans-serif;
 }
+
 .add-drug > button {
     font: 900 14px "Roboto", sans-serif;
     color: #fff;
     background-color: #A12B2B;
     padding: 6px 9px;
-    border: 1px solid var(--tertiary_color);
     border-radius: 5px;
     margin-left: 4px;
     cursor: pointer;
-    margin-top: 22px;
+    margin-top: 18px;
+    align-items: center;
 }
+
 .add-drug > div > section{
     width: 100%;
     height: 107px;
@@ -407,58 +564,198 @@ td:nth-child(1) {
     font: 400 12px "Roboto", sans-serif;
 }
 
-
-/* Mobile view for container side */
-@media screen and (max-width: 600px) {
-    .container {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    aside {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 20px;
-        height: 400px;
-        margin-bottom: 3px;
-        border-bottom: 2px solid #ccc;
-    }
-
-    main {
-        width: 100%;
-        border-left: 0px;
-        border-bottom: 1px solid #ccc;
-    }
-
-    nav ul li {
-        justify-content: space-between;
-    }
-
-    aside ul li i {
-        margin-right: 10px;
-    }
-
-    nav ul li a {
-        width: 40%;
-    }
-
-    .breadcrumb {
-        display: flex;
+@media screen and (max-width: 580px) {
+    .add-drug{
         flex-wrap: wrap;
-        font-size: 14px;
+    }
+    .add-drug > div:nth-child(1) {
+        width: 300px;
+    }
+    .add-drug > div:nth-child(2) {
+        width: 240px;
+    }
+    .add-drug > div:nth-child(3) {
+        width: 290px;
+    }
+    .add-drug > div:nth-child(4) {
+        width: 105px;
     }
 
-    .breadcrumb span {
-        margin-right: 5px;
-    }
+}
 
-    .sp {
-        font-weight: 750;
-    }
+@media screen and (max-width: 766px) {
+    .add-drug > div > p {
+        display: block;
+        font: 900 11.5px "Roboto", sans-serif;
+      }
+}
+
+@media screen and (max-width: 766px) {
+    .add-drug > div > section > div > p {
+        display: block;
+      }
 }
 
 
-.button-section {
+
+
+/* footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 9px;
+    background-color: #fff;
+    font: 900 18px "Roboto", sans-serif;
+    position: absolute;
+    bottom: -75px;
+    right: 23px;
+    padding: 15px 0;
+}
+footer > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 72%;
+    padding: 0 32px;
+}
+footer > div > button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 8px 8px 21px;
+    text-transform: uppercase;
+    font: 900 14px "Roboto", sans-serif;
+    color: #fff;
+    background-color: #A12B2B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer > div > button > img {
+    width: 25px;
+    height: 25px;
+}
+footer > section {
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 1032px;
+    box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.2);
+    padding: 33px 25px;
+}
+footer > section > .items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+.items > p {
+    border-right: 1px solid var(--main_color);
+    padding-right: 10px;
+}
+.items > p:last-child{
+    border-right: none;
+    padding-right: 0px;
+} */
+
+
+footer {
+    margin-top: 0.1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 9px;
+    /* background-color: #fff; */
+    font: 700 18px "Roboto", sans-serif;
+    position: absolute;
+    /* bottom: -75px; */
+    /* right: 23px; */
+    padding: 15px 0;
+}
+
+footer > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 81%;
+    padding: 0 32px;
+}
+
+footer > div > button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 8px 8px 21px;
+    text-transform: uppercase;
+    font: 900 14px "Roboto", sans-serif;
+    color: #fff;
+    background-color: #A12B2B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer > div > button > img {
+    width: 25px;
+    height: 25px;
+}
+
+footer > section {
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 1032px;
+    box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.2);
+    padding: 33px 25px;
+}
+
+footer > section > .items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.items > p {
+    border-right: 1px solid red;
+    padding-right: 10px;
+}
+
+.items > p:last-child{
+    border-right: none;
+    padding-right: 0px;
+}
+
+@media screen and (max-width: 1280px) {
+    footer{
+        width: 100%;
+        font: 900 15px "Roboto", sans-serif;
+        position: absolute;
+        bottom: -50px;
+        right: 0px;
+        padding: 0;
+        z-index: 20;
+     }
+     footer > div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 79.5%;
+        padding: 0 32px;
+    }
+     footer > section {
+        width: 100%;
+    }
+}
+/* .button-section {
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -469,8 +766,8 @@ td:nth-child(1) {
 
 .button-section > button {
     position: absolute;
-    left: 20em;
-    top: 10px;
+    right: 50em;
+    top: 1em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -485,8 +782,22 @@ td:nth-child(1) {
     cursor: pointer;
 }
 
+@media screen and (max-width: 766px) {
+    .button-section > button > p {
+        display: block;
+    }
+}
 
-/* Footer section */
+@media screen and (min-width: 838px) {
+    
+
+    .button-section > button {
+        right: 34em;
+    }
+}
+
+
+
 footer {
     margin-top: 4em;
     width: 80%;
@@ -512,24 +823,73 @@ footer a {
     color: black;
 }
 
-/* Mobile view for Footer section */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 766px) {
     footer p {
-        font-size: 12px;
-        line-height: 1.5;
-    }
-
-    footer {
-        width: 100%;
-        border-left: 0px;
-        border-right: 0px;
-    }
-
-    footer p a {
-        display: inline-block;
-        margin-top: 5px;
-        font-size: 12px;
+        display: block;
     }
 }
 
+@media screen and (max-width: 1000px) {
+    footer {
+        width: 100%;
+    }
+} */
 
+
+
+/* footer {
+    background-color: red;
+    color: #fff;
+    padding: 0px;
+    position: relative;
+    margin-top: 4em;
+    width: 80%;
+    float: right;
+    
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .button-section {
+    position: absolute;
+    bottom: 7em;
+    left: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .other-content {
+    flex: 1;
+    margin-top: 50px;
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  
+    .button-section {
+      top: 10px;
+      left: 10px;
+    }
+  }
+ */
