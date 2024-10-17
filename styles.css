@@ -72,6 +72,7 @@ body {
 .top-header > section:nth-child(2) > img:nth-child(2){
     width: 35px;
     margin-right: 6px;
+    cursor: pointer;
 }
 
 .top-header > section:nth-child(2) > p {
@@ -113,13 +114,25 @@ body {
     }
 
     @media screen and (max-width: 766px) {
-    .top-header > section:nth-child(2) > svg, p {
-        font-size: 10px;
+    .top-header > section:nth-child(2) > svg {
         display: none;
+        position: absolute;
+        top: 5em;
+        left: 42em;
+    }
+    .top-header > section:nth-child(2) > p{
+        /* font-size: 10px; */
+        display: none;
+        position: absolute;
+        top: 3.5em;
+        left: 23.5em;
+        box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.2);
+        padding: 2px;
     }
     }
      
 }
+
 
 @media screen and (max-width: 560px) {
     .top-header > section:nth-child(1) > h2{
@@ -177,18 +190,29 @@ aside > .nav-content{
     width: 20px;
     height: 20px;
 }
+
 .nav-content:nth-of-type(9) > div > p {
     text-decoration: underline 5px;
     text-underline-offset: 10px;
     text-decoration-color: #e74c3c;
 }
 
+.nav-content:nth-of-type(9) > div > i {
+    color: #e74c3c;
+}
+
 
 @media screen and (max-width: 838px) {
     aside {
         display: none;
+        background-color: red;
+        position: absolute;
+        left: 0.1em;
+        /* padding: 40px 18px 180px; */
+        /* margin-top: 2px; */
     }
 }
+
 
 /* main */
 main {
@@ -212,8 +236,9 @@ main {
     font: 600 24px "Roboto", sans-serif;
     text-transform: capitalize;
     color: #5B5B5B;
-
 }
+
+
 
 .blank-heading > div {
     display: flex;
@@ -235,7 +260,7 @@ main {
 .blank-heading > div > svg{
     width: 15px;
     height: 15px;
-    fill: #5B5B5B;
+    fill: #C4C4C4;
 }
 
 main > div:nth-child(1) > svg {
@@ -314,19 +339,13 @@ main > div:nth-child(1) > svg {
 
 
 /* table */
-.drug-table {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 5px;
-    margin-bottom: 95px;
+.drug-table{
+    margin-bottom: 60px;
 }
 
-.drug-table > h4{
+.drug-table > h4 {
     font: 600 15px "Roboto", sans-serif;
-    margin-bottom: 4px;
+    color: #5B5B5B;
 }
 
 .drug-table > table{
@@ -337,11 +356,13 @@ main > div:nth-child(1) > svg {
     overflow-x: auto;
 }
 
-tr, th, td{
+tr, td{
     border: 2px solid #E5E5E5;
     border-top: none;
     border-left: none;
 }
+
+
 
 th:nth-last-child(1), td:nth-last-child(1){
     border-right: 1px solid transparent;
@@ -351,16 +372,31 @@ th {
     background-color: #F3F2F2;
     padding: 7px;
     text-align: left;
-    font: 900 14px "Roboto", sans-serif;
-}
-
-th:nth-child(1) {
-    text-align: center;
+    font: 700 12px "Roboto", sans-serif;
+    width: 10%;
 }
 
 td {
     padding: 8px 20px;
-    font: 500 12px "Roboto", sans-serif;
+    font: 700 11px "Roboto", sans-serif;
+}
+
+
+td > button{
+    background-color: #A12B2B;
+    color: #fff;
+    border: 0;
+    outline: none;
+    padding: 3px 6px;
+    font: 700 12px "Roboto", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+#no-drugrow {
+    text-align: center;
 }
 
 .medicine-name > p {
@@ -388,6 +424,70 @@ td:nth-child(1) {
     text-align: center;
 }
 
+.drug-table > div:nth-of-type(1) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.drug-table > div:nth-of-type(1) > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding: 5px;
+    outline: none;
+    border: 0;
+    background-color: #A12B2B;
+    color: #fff;
+    font: 700 14px "Roboto", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drug-table > div:nth-of-type(2) {
+    width: 100%;
+    display: none;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.drug-table > div:nth-of-type(2) > section {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.drug-table > div:nth-of-type(2) > section > label {
+    font: 500 14px "Robotot", sans-serif;
+}
+
+.drug-table > div:nth-of-type(2) > section > input {
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 0px 4px 2px rgba(117, 116, 116, 0.25);
+    font: 400 14px "Roboto", sans-serif;
+}
+
+.drug-table > div:nth-of-type(2) > section > button {
+    background-color: #A12B2B;
+    color: #fff;
+    border: 0;
+    outline: none;
+    padding: 5px 8px;
+    font: 700 14px "Roboto", sans-serif;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
 /* select option */
 .select-options{
     display: flex ;
@@ -413,98 +513,207 @@ td:nth-child(1) {
     background-color: #fff;
     color: #e74c3c;
     border: 1px solid #e74c3c;
-    padding: 2px;
+    padding: 2.5px;
 }
 
 /* Add drug section */
-.add-drug {
+.add-drugs {
+    width: 100%;
+}
+
+.add-drugs > h4 {
+    font: 700 15px "Roboto", sans-serif;
+    color: #5B5B5B;
+    margin-bottom: 10px;
+}
+
+.add-drugs > section {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.add-drugs > button {
+    background-color: #A12B2B;
+    color: white;
+    border: 0;
+    outline: none;
+    padding: 8px 20px;
+    font: 700 14px "Roboto", sans-serif;
+    border-radius: 5px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.add-drugs > section > .fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    margin-right: 8px;
+}
+
+.fields > label {
+    font: 500 10px "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.fields > label > div {
+    color: red;
+    border: 1px solid #e9e8e8;
+    padding: 2px 4px;
+}
+
+.fields > input, .fields > select, .two-form, .fields > textarea {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font: 500 14px "Roboto", sans-serif;
+    box-shadow: 0px 0px 8px 2px rgba(117, 116, 116, 0.25);
+    border-radius: 5px;
+}
+
+
+.fields > select {
+    font: 500 13px "Roboto", sans-serif;
+}
+
+.fields > select > option {
+    overflow-x: hidden;
+    background-color: #fff;
+    border: 0;
+    outline: none;
+    font: 500 12px "Roboto", sans-serif;
+}
+
+.fields > input:focus {
+    outline: 1px solid black;
+}
+
+.fields > input::placeholder {
+    font: 500 12px "Roboto", sans-serif;
+}
+
+.fields:nth-child(1) {
+    width: 243px;
+}
+
+.fields:nth-child(2) {
+    width: 220px;
+}
+
+.fields:nth-child(3) {
+    width: 100px;
+}
+.fields:nth-child(4) {
+    width: 140px;
+}
+
+.fields:nth-child(5) {
+    width: 120px;
+}
+
+
+.fields > .two-form {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 5px;
 }
 
-.add-drug > div {
+.two-form > select, .two-form > input {
+    width: 50%;
+    border: 0;
+    outline: none;
+    font: 500 12px "Roboto", sans-serif;
+}
+
+.fields > textarea {
+    width: 220px;
+    height: 33px;
+}
+
+.fields > .search-data{
+    width: 100%;
+    height: 220px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 2px rgba(117, 116, 116, 0.25);
+    background-color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    z-index: 30;
+}
+.search-data > div:nth-child(1){
+    border-bottom: 1px solid #e2e2e2;
+    padding: 6px 7px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.search-data > div:nth-child(1) > button{
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--main_color);
+    font: 900 14px "Roboto", sans-serif;
+    text-decoration: underline;
+}
+.search-data > div:nth-child(2){
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 6px 2px 6px 7px;
+}
+.search-data > .result{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 4px;
 }
-
-.add-drug > div > p {
-    font: 900 13px "Roboto", sans-serif;
-}
-
-.add-drug > div:nth-child(1) {
-    width: 29.2%;
-}
-
-.add-drug > div:nth-child(2) {
-    width: 24.2%;
-}
-
-.add-drug > div:nth-child(3) {
-    width: 27.8%;
-}
-
-.add-drug > div:nth-child(4) {
-    width: 11.8%;
-}
-
-.add-drug > div > input{
+.result-item{
     width: 100%;
-    padding: 10px 10px 5px 23px;
-    border: 0;
-    outline: none;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.2);
-    font: 500 15px "Roboto", sans-serif;
-}
-
-.add-drug > div > input:nth-last-child(1){
-    padding: 7px;  
-}
-
-.add-drug > div > ::placeholder{
-    color: #C4C4C4;
-    font: 300 14px "Roboto", sans-serif;
-}
-
-.add-drug > button {
-    font: 900 14px "Roboto", sans-serif;
-    color: #fff;
-    background-color: #A12B2B;
-    padding: 6px 9px;
-    border-radius: 5px;
-    margin-left: 4px;
+    font: 700 14px "Roboto", sans-serif;
     cursor: pointer;
-    margin-top: 18px;
-    align-items: center;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+.result-item:hover{
+    background-color: #d6d4d4;
+}
+.spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid;
+    border-color: #dbdcef;
+    border-right-color: #474bff;
+    animation: spinner-d3wgkg 1s infinite linear;
+    position: absolute;
+    top: 30px;
+    right: 4px;
+}
+@keyframes spinner-d3wgkg {
+    to {
+       transform: rotate(1turn);
+    }
 }
 
-.add-drug > div > section{
-    width: 100%;
-    height: 107px;
-    background-color: #fff;
-    padding: 20px 6px 5px;
-    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 5px;
-}
-
-.add-drug > div > section > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font: 400 12px "Roboto", sans-serif;
-}
 
 @media screen and (max-width: 580px) {
     .add-drug{
@@ -599,7 +808,7 @@ footer > section > .items {
 }
 
 .items > p {
-    border-right: 1px solid red;
+    border-right: 1px solid black;
     padding-right: 10px;
 }
 
@@ -666,3 +875,56 @@ footer > section > .items {
         height: 20px;
     }
 }
+
+
+#api-data {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    display: none;
+    max-height: 190px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.2);
+}
+
+.name-item {
+    margin: 5px 0;
+    padding: 5px;
+    font: 750 12px "Roboto", sans-serif;
+    color: #5B5B5B;
+    cursor: pointer;
+    /* background-color: red; */
+}
+
+.name-item:hover {
+    background-color: #f9f9f9;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 3px;
+    text-align: right;
+    border-bottom: 2px solid #f9f9f9;
+}
+
+#drug-info {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+
+

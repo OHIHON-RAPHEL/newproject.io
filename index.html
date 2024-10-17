@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 </head>
 <body>   
     <header class="top-header">
@@ -47,13 +48,14 @@
       </section>
       <section class="name">
         <img src="images/bell.png">
-        <img src="images/avater.png">
-        <p>Isaac Odinaka</p>
+        <img id="myImage" src="images/avater.png">
+        <p id="myParagraph">Isaac Odinaka</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
           width="20px"
           height="20px"
+          id="myIcon"
         >
           <path
             d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
@@ -256,83 +258,131 @@
               <tr>
                 <th>S/N</th>
                 <th>Medicine Name</th>
-                <th>Strength</th>
-                <th>Interval/Duration</th>
+                <th>Medicine Class</th>
+                <th>Dose & Freq.</th>
+                <th>Duration</th>
                 <th>Instruction</th>
-                <th>Action</th>
+                <th>Actions</th>
               </tr>
               <tr>
-                <td>1</td>
-                <td class="medicine-name">
-                  <p>Tab Emzor Paracetamol 250mg</p>
-                  <button>Arthemeter</button>
-                </td>
-                <td>250mg</td>
-                <td>QDS/7 days</td>
-                <td>1 Morning, one night for 7 days</td>
-                <td class="action">
-                  <button>Remove</button>
-                </td>
+                <td colspan="7" id="no-drugrow">No prescribed drug yet</td>
               </tr>
-              <tr>
-                <td>2</td>
-                <td class="medicine-name">
-                  <p>Tab Emzor Paracetamol 250mg</p>
-                  <button>Arthemeter</button>
-                </td>
-                <td>250mg</td>
-                <td>QDS/7 days</td>
-                <td>1 Morning, one night for 7 days</td>
-                <td class="action">
-                  <button>Remove</button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td class="medicine-name">
-                  <p>Tab Emzor Paracetamol 250mg</p>
-                  <button>Arthemeter</button>
-                </td>
-                <td>250mg</td>
-                <td>QDS/7 days</td>
-                <td>1 Morning, one night for 7 days</td>
-                <td class="action">
-                  <button>Remove</button>
-                </td>
-              </tr>
+              <tbody id="tbody"></tbody>
             </table>
-          </div>
-
-          <div class="add-drug">
             <div>
-              <p>Search Medicine brand</p>
-              <input type="text" placeholder="search medicine brand" />
+              <button id="done-prescribing">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                  width="15px"
+                  height="15px"
+                  fill="#fff"
+                >
+                  <path
+                    d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                  />
+                </svg>
+                <p>Done prescribing</p>
+              </button>
+            </div>
+            <div id="remark">
               <section>
-                <div>
-                  <p>Emzor Paracetamol Tab 250mg</p>
-                  <p>(10 sachet left)</p>
-                </div>
-                <div>
-                  <p>Paracetamol</p>
-                  <p>(5 bottles left)</p>
-                </div>
+                <label for="remark">Remarks</label>
+                <input type="text" id="remark" name="remark" />
+                <button>Save Prescription</button>
               </section>
             </div>
-            <div>
-              <p>Interval</p>
-              <input type="text" placeholder="Enter  interval" />
-            </div>
-            <div>
-              <p>Special Instruction</p>
-              <input type="text" placeholder="enter instruction" />
-            </div>
-            <div>
-              <p>Duration</p>
-              <input type="text" placeholder="enter duration" />
-            </div>
-            <button>Add</button>
           </div>
           
+          <div class="add-drugs">
+            <h4>Prescribe A Drug</h4>
+            <section>
+              <div class="fields">
+                <label for="med-class">
+                  <p>Medicine Class</p>
+                  <div>List All Medicine</div>
+                </label>
+                <input
+                  type="text"
+                  name="med-class"
+                  id="med-class"
+                  placeholder="Search medicine class"
+                  class="med-class"
+                />
+                <div class="spinner" id="spinner1"></div>
+                <section class="search-data" id="search-data1">
+                  <div>
+                    <button class="close-search">Close</button>
+                  </div>
+                  <div class="result" id="result1"></div>
+                </section>
+              </div>
+              <div class="fields">
+                <label for="med-name">
+                  <p>Medicine Name</p>
+                  <div>Add A New Medicine</div>
+                </label>
+                <input
+                  type="text"
+                  name="med-name"
+                  id="med-name"
+                  placeholder="Search medicine class"
+                  class="med-name"
+                />
+                <div class="spinner" id="spinner2"></div>
+                <section class="search-data" id="search-data2">
+                  <div>
+                    <button class="close-search">Close</button>
+                  </div>
+                  <div class="result" id="result2"></div>
+                </section>
+              </div>
+              <div class="fields">
+                <label for="dose"> Dose </label>
+                <input
+                  type="text"
+                  name="dose"
+                  id="dose"
+                  placeholder="Enter strength"
+                  class="med-name"
+                />
+              </div>
+              <div class="fields">
+                <label for="interval"> Interval </label>
+                <select name="interval" id="interval">
+                  <option value="" disabled selected style="color: darkgrey">
+                    Select Frequency
+                  </option>
+                  <option value="Q2W">Q2W - Every other week</option>
+                  <option value="Q3W">Q3W - Every other week</option>
+                </select>
+              </div>
+              <div class="fields">
+                <label for="interval"> Duration </label>
+                <div class="two-form">
+                  <input
+                    type="number"
+                    name="duration"
+                    id="duration1"
+                    placeholder="type"
+                  />
+                  /
+                  <select name="duration2" id="duration2">
+                    <option value="7">7</option>
+                    <option value="7">14</option>
+                    <option value="7">21</option>
+                    <option value="7">52</option>
+                  </select>
+                </div>
+              </div>
+              <div class="fields">
+                <label for="instruction"> Instructions </label>
+                <textarea name="instruction" id="instruction"> </textarea>
+              </div>
+            </section>
+            <button id="add-prescription">Add</button>
+          </div>
+
         </main>
 
     </div>
@@ -354,5 +404,6 @@
         </div>
       </section>
     </footer>
+  <script src="script.js"></script>
 </body>
 </html>
