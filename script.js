@@ -1,5 +1,3 @@
-const sideNavbtn = document.querySelector(".sideNav");
-const sideNav = document.querySelector("aside");
 const medInput = document.querySelector("#med-class");
 const medNameInput = document.querySelector("#med-name");
 const doseInput = document.querySelector("#dose");
@@ -19,16 +17,6 @@ const tableBody = document.querySelector("#tbody");
 const noDrugRow = document.querySelector("#no-drugrow");
 const donePrescribingBtn = document.querySelector("#done-prescribing");
 const remarkDiv = document.querySelector("#remark");
-
-sideNavbtn.addEventListener("mouseover", () => {
-  // sideNav.classList.add("show");
-  // sideNav.style.display = 'block'
-  sideNav.classList.toggle("show", true);
-});
-sideNav.addEventListener("mouseleave", () => {
-  // sideNav.classList.remove("show");
-  sideNav.style.display = 'none'
-});
 
 // First api call when the first input field is clicked
 medInput.addEventListener("focus", async () => {
