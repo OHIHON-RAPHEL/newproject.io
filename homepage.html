@@ -36,7 +36,8 @@
          <label for="filter">Filter</label>
          <input type="text" placeholder="Search by name or phone" class="search-input">
         </div>
-         
+
+        <p id="enrollGymBtn">Enroll Gym</p>
         <table class="data-table">
             <thead>
                 <tr>
@@ -118,6 +119,118 @@
               </table>
             </div>
         </div>
+
+        <div class="form-container" id="formContainer">
+          <div class="div">
+            <span>Membership History</span>
+          </div>
+          <form>
+            <div>
+              <div class="contain">
+                <div>
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Enter client full name">
+                </div>
+                <div>
+                  <label>Gender</label>
+                  <select>
+                    <option>Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+              </div>
+              <div class="contain">
+                <div>
+                  <label>Date Of Birth</label>
+                  <input type="date">
+                </div>
+                <div>
+                  <label>Phone Number</label>
+                  <input type="text" placeholder="Enter phone number(s)">
+                </div>
+              </div>
+              <div class="contain">
+                <div>
+                  <label>Address</label>
+                  <input type="text" placeholder="Enter full address">
+                </div>
+                <div class="form-group">
+                  <label>How You Found Us</label>
+                  <input type="text" placeholder="Enter how you found us">
+                </div>
+              </div>
+
+              <!-- Emergency Contact Details -->
+              <h3>Emergency Contact Details</h3>
+              <div class="contain">
+                <div>
+                  <label>Contact Name</label>
+                  <input type="text" placeholder="Enter contact name">
+                </div>
+                <div>
+                  <label>Phone Number</label>
+                  <input type="text" placeholder="Enter phone number">
+                </div>
+              </div>
+              <div class="contain">
+                <div>
+                  <label>Relationship</label>
+                  <input type="text" placeholder="Enter relationship">
+                </div>
+                <div>
+                  <label>Phone Number</label>
+                  <input type="text" placeholder="Enter phone number">
+                </div>
+              </div>
+
+              <!-- Membership Details -->
+              <h3>Membership Details</h3>
+              <div class="contain">
+                <div>
+                  <label>Choose Plan</label>
+                  <select>
+                    <option>Deluxe - Monthly</option>
+                    <option>Standard - Monthly</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Discount</label>
+                  <input type="number" placeholder="Flat" value="5000">
+                </div>
+              </div>
+              <div class="contain">
+                <div>
+                  <label>Amount Payable</label>
+                  <input type="number" placeholder="Enter amount" value="5000">
+                </div>
+                <div>
+                  <label>Surcharge (%)</label>
+                  <input type="number" placeholder="Enter surcharge" value="5000">
+                </div>
+              </div>
+
+              <!-- Payment Details -->
+               <h3>Payment Details</h3>
+               <div class="contain">
+                 <div>
+                   <label>Paying Amount</label>
+                   <input type="number" value="5000">
+                 </div>
+                 <div>
+                   <label>Choose Bank</label>
+                   <select>
+                     <option>Zenith Bank PLC</option>
+                     <option>GT Bank</option>
+                     <option>First Bank</option>
+                   </select>
+                 </div>
+               </div>
+            </div>
+            <button type="submit">Save</button>  
+          </form>
+            
+
     </div>
     <script src="script.js"></script>
 </body>

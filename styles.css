@@ -251,6 +251,11 @@ main {
     
 }
 
+.blank-heading > div > a {
+    text-decoration-line: none;
+    color: #C4C4C4;
+}
+
 /* .blank-heading > div > link {
     cursor: pointer;
 } */
