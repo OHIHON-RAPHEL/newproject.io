@@ -248,7 +248,12 @@ main {
 .blank-heading > div > p {
     font: 200 18px "Roboto", sans-serif;
     color: #C4C4C4;
+    
 }
+
+/* .blank-heading > div > link {
+    cursor: pointer;
+} */
 
 .blank-heading > div > p:last-child {
     font: 900 18px "Roboto", sans-serif;
@@ -420,7 +425,7 @@ td > button{
 td:nth-child(1) {
     color: #505050;
     font: 500 15px "Roboto", sans-serif;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .drug-table > div:nth-of-type(1) {
@@ -875,6 +880,11 @@ footer > section > .items {
         height: 20px;
     }
 }
+
+
+
+
+
 
 
 

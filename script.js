@@ -18,6 +18,30 @@ const noDrugRow = document.querySelector("#no-drugrow");
 const donePrescribingBtn = document.querySelector("#done-prescribing");
 const remarkDiv = document.querySelector("#remark");
 
+const viewHistoryBtn = document.getElementById('viewHistoryBtn');
+const membershipHistory = document.getElementById('membershipHistory');
+const closeBtn = document.getElementById('closeBtn');
+
+viewHistoryBtn.addEventListener('click', () => {
+  console.log("clicked");
+  membershipHistory.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  membershipHistory.style.display = 'none';
+});
+
+// document.getElementById('showButton').addEventListener('click', function() {
+//   console.log("clicked")
+//   document.getElementById('hiddenText').style.display = 'block';
+// });
+
+
+// const viewHistoryBtn = document.getElementById('viewHistoryBtn');
+//     const membershipHistory = document.getElementById('membershipHistory');
+//     const overlay = document.getElementById('overlay');
+//     const closeBtn = document.getElementById('closeBtn');
+
 // First api call when the first input field is clicked
 medInput.addEventListener("focus", async () => {
   console.log("first input clicked");
@@ -173,3 +197,20 @@ function clearInput() {
   duration2.value = "";
   instructionInput.value = "";
 }
+
+
+
+    // viewHistoryBtn.addEventListener('click', () => {
+    //   membershipHistory.style.display = 'block';
+    //   overlay.style.display = 'block';
+    // });
+
+    // closeBtn.addEventListener('click', () => {
+    //   membershipHistory.style.display = 'none';
+    //   overlay.style.display = 'none';
+    // });
+
+    // overlay.addEventListener('click', () => {
+    //   membershipHistory.style.display = 'none';
+    //   overlay.style.display = 'none';
+    // });
