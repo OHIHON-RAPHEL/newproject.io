@@ -19,7 +19,7 @@ body {
     padding: 30px 24px 33px;
     margin-bottom: 21px;
     box-shadow: 0px 8px 4px -4px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background-color: #A12B2B;
     height: 80px;
 }
 
@@ -39,12 +39,18 @@ body {
 }
 
 .top-header > section:nth-child(1) > div > h1 {
-    font: 300 25px "Roboto", sans-serif;
-    border: 6px solid #9C3030;
-    padding: 4px;
+    font: 300 24px "Roboto", sans-serif;
+    /* border: 6px solid #9C3030; */
+    background-color: #fff;
+    padding: 4px 1px;
     width: 140px;
     color: #9C3030;
 }
+
+.top-header > section:nth-child(2) > svg {
+    fill: #fff;
+}
+
 
 .top-header > section:nth-child(1) > div > img {
     background-color: #9C3030;
@@ -55,7 +61,8 @@ body {
 .top-header > section:nth-child(1) > h2 {
     font: 700 35px "Roboto", sans-serif;
     text-transform: capitalize;
-    color: #5B5B5B;
+    /* color: #5B5B5B; */
+    color: #fff;
 }
 
 .top-header > section:nth-child(2) {
@@ -79,7 +86,8 @@ body {
     font: 700 22px "Roboto", sans-serif;
     text-transform: capitalize;
     white-space: nowrap;
-    color: #5B5B5B;
+    /* color: #5B5B5B; */
+    color: #fff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -805,9 +813,11 @@ footer > section {
     align-items: center;
     gap: 15px;
     width: 1032px;
+    background-color: #A12B2B;
     box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.2);
     padding: 33px 25px;
     width: 81%;
+    color: #fff;
 }
 
 footer > section > .items {
@@ -818,7 +828,8 @@ footer > section > .items {
 }
 
 .items > p {
-    border-right: 1px solid black;
+    /* border-right: 1px solid black; */
+    border-right: 1px solid #fff;
     padding-right: 10px;
 }
 

@@ -2,13 +2,11 @@
     width: 97%;
     margin: auto;
     background: #fff;
-    /* border-radius: 8px; */
-    /* padding: 20px; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    
 }
 
 .containers > p {
-  float: right;
+    float: right;
     background-color: #A12B2B;
     color: #fff;
     padding: 3px;
@@ -18,7 +16,6 @@
 }
 
 .containers > div:nth-child(3) > input {
-    /* margin-top: 30px; */
     width: 28%;
     background-color: #fff;
     border: none;
@@ -49,13 +46,31 @@
     gap: 2px;
 }
 
+.span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4em;
+}
+
+.span > div > span:nth-child(1) {
+  background-color: #5B5B5B;
+  border-radius: 7px;
+  font: 500 12px "Roboto", sans-serif;
+  padding: 3px 7px;
+  color: #fff;
+}
+
+.span > div > span:nth-child(2) {
+  font: 500 12px "Roboto", sans-serif;
+}
+
 .containers > div > button {
     padding: 7px;
     border: none;
     border: 2px solid #a50032;
     cursor: pointer;
     background: #ddd;
-    /* border-radius: 5px; */
 }
 
 .tab.active {
@@ -67,9 +82,6 @@
     display: flex;
     gap: 7px;
     margin-top: 20px;
-    /* margin: 20px 0;
-    display: flex;
-    gap: 15px; */
 }
 
 .containers > div:nth-child(2) > .feilds {
@@ -78,8 +90,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
-    /* position: relative;
-    margin-right: 8px; */
 }
 
 .containers > div:nth-child(2) > .feilds > input {
@@ -159,8 +169,6 @@ small {
     border-radius: 6px;
     font: 500 10px "Roboto", sans-serif;
     cursor: pointer;
-    /* display: flex;
-    align-items: center; */
 }
 
 .status-btn {
@@ -205,14 +213,11 @@ small {
 /* Membership History */
 .membership-history {
     width: 410px;
-    /* height: 100px; */
     position: relative;
     bottom: 7em;
     left: 54em;
     background-color: #fff;
     border: 1px solid #ddd;
-    /* border-radius: 8px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     box-shadow: 0px 0px 8px 2px rgba(117, 116, 116, 0.25);
   }
 
@@ -222,10 +227,8 @@ small {
 
   
   .membership-history > div:nth-child(1) {
-    /* display: flex; */
     background-color: #A12B2B;
     text-align: center;
-    /* gap: 5em; */
     padding: 10px 15px;
     font-size: 16px;
     font-weight: bold;
@@ -241,18 +244,11 @@ small {
     float: right;
   }
 
-  /* .membership-history > div:nth-child(1) > span {
-    color: #fff;
-    text-align: center;
-  } */
-
   
   .table {
     width: 98%;
     border-collapse: collapse;
     margin: 10px 0;
-    /* background-color: red;
-    padding: 40px; */
   }
 
   .div {
@@ -267,13 +263,8 @@ small {
     color: black;
   }
 
-  /* .table > tbody > tr:nth-child(2) > td:nth-child(3) {
-    text-align: left;
-    color: red;
-  } */
   
   thead > tr > td {
-    /* background-color: red; */
     padding: 7px;
     font: 400 14px "Roboto", sans-serif;
   }
@@ -328,11 +319,7 @@ small {
   .form-container {
     position: relative;
     left: 35em;
-    bottom: 6em;
-    /* background-color: #fff; */
-    /* border-radius: 8px; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* width: 300px; */
+    bottom: 14em;
     width: 544px;
   }
 
@@ -358,11 +345,8 @@ small {
     background-color: #A12B2B;
     text-align: center;
     font: 600 16px "Roboto", sans-serif;
-    /* gap: 5em; */
-    /* padding: 10px 15px; */
-    /* font-size: 16px;
-    font-weight: bold; */
     color: #fff;
+    width: 527.5px;
   }
   
   .form-container > form > div {

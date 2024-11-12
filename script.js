@@ -25,6 +25,7 @@ const closeBtn = document.getElementById('closeBtn');
 const enrollGymBtn = document.getElementById('enrollGymBtn');
 const formContainer = document.getElementById('formContainer');
 
+
 enrollGymBtn.addEventListener('click', () => {
   console.log("clicked");
   formContainer.style.display = 'block';
