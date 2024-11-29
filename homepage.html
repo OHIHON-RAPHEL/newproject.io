@@ -26,7 +26,9 @@
 
            <div class="feilds">
              <label for="membership-plan">Membership Plan</label>
-             <input type="number" id="end-date">
+             <select>
+               <option>All plans</option>
+             </select>
            </div>
 
             <!-- <input type="text" placeholder="Search by name or phone" class="search-input"> -->
@@ -65,10 +67,16 @@
                 <tr>
                   <td>2</td>
                     <td>2020-10-14 9:45 PM<br><span class="name1">Isaac Odinaka Franklin</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td>2020-10-14 9:45 PM<br><span class="name1">Isaac Odinaka Franklin</span></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                 </tr>
             </tbody>
         </table>
@@ -160,7 +168,7 @@
               <div class="contain">
                 <div>
                   <label>Date Of Birth</label>
-                  <input type="date">
+                  <input type="text"  placeholder="date of birth">
                 </div>
                 <div>
                   <label>Phone Number</label>
@@ -213,17 +221,17 @@
                 </div>
                 <div>
                   <label>Discount</label>
-                  <input type="number" placeholder="Flat" value="5000">
+                  <input type="text" placeholder="Flat">
                 </div>
               </div>
-              <div class="contain">
+              <div class="contains">
                 <div>
                   <label>Amount Payable</label>
-                  <input type="number" placeholder="Enter amount" value="5000">
+                  <input type="text" placeholder="Enter amount" value="5000" >
                 </div>
                 <div>
                   <label>Surcharge (%)</label>
-                  <input type="number" placeholder="Enter surcharge" value="5000">
+                  <input type="text" placeholder="Enter surcharge" value="5000">
                 </div>
               </div>
 
@@ -246,9 +254,9 @@
             </div>
             <button type="submit">Save</button>  
           </form>
-            
-
         </div>
+      
+      
 
     <script src="script.js"></script>
 </body>
